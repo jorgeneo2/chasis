@@ -2,7 +2,6 @@ import { Component, OnInit, ViewChild, ElementRef, OnDestroy, ChangeDetectionStr
 import { ActivatedRoute } from '@angular/router';
 import { SingleSpaService } from '../../services/single-spa.service';
 import { Observable } from 'rxjs';
-import { EventBusService } from '../lib/event.service';
 
 @Component({
   selector: 'app-spa-host',
@@ -15,18 +14,16 @@ export class SpaHostComponent implements OnInit {
 
   @ViewChild('appContainer', { static: true })
   appContainerRef: ElementRef;
-  eventBus: EventBusService;
 
   appName: string;
 
   ngOnInit() {
     this.appName = this.route.snapshot.data.app;
-    this.eventBus = this.route.snapshot.data.eventBus;
     this.mount().subscribe();
   }
 
   mount(): Observable<unknown> {
-    return this.singleSpaService.mount(this.appName, this.appContainerRef.nativeElement, this.eventBus);
+    return this.singleSpaService.mount(this.appName, this.appContainerRef.nativeElement);
   }
 
   unmount(): Observable<unknown> {

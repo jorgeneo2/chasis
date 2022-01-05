@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { mountRootParcel, Parcel, ParcelConfig } from 'single-spa';
 import { Observable, from } from 'rxjs';
 import { tap } from 'rxjs/operators';
-import { EventBusService } from 'src/app/lib/event.service';
 
 
 @Injectable({
@@ -13,13 +12,12 @@ export class SingleSpaService {
     [appName: string]: Parcel;
   } = {};
 
-  mount(appName: string, domElement: HTMLElement, eventBusService: EventBusService): Observable<unknown> {
+  mount(appName: string, domElement: HTMLElement): Observable<unknown> {
     console.log('Mount App', domElement);
     return from(System.import<ParcelConfig>(appName)).pipe(
       tap((app: ParcelConfig) => {
         this.loadedParcels[appName] = mountRootParcel(app, {
-          domElement,
-          EventBus: eventBusService
+          domElement
         });
       })
     );
