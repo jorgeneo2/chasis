@@ -1,0 +1,7 @@
+{
+  "active_when": {
+    "BASE": "/",
+    "PAYMENT": "/portal-pj/payments-pj",
+    "HEADER_ACTIVE_EXCEPT": ["/portal-pj/session-expired"]
+  }
+}

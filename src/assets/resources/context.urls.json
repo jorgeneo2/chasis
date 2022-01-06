@@ -1,0 +1,23 @@
+{
+  "urls": {
+    "portal_pj_enterprises": "/empresas",
+    "microfrontends": {
+      "headerpj": "/header-pj/main.js",
+      "footerpj": "/footer-pj/main.js",
+      "paymentspj": "/payments-module-pj/main.js"
+    },
+    "3scale": {
+      "base": "https://apis-dev.itau.co/api-pj",
+      "client_session_data": "/authentication/v1/user/"
+    },
+    "sso": {
+      "base": "https://secure-sso-dev.itau.co",
+      "tokenEndpoint": "/auth/realms/realm-api-externo/protocol/openid-connect/token",
+      "logoutEndpoint": "/auth/realms/realm-api-externo/protocol/openid-connect/logout"
+    },
+    "ONPREMISE": {
+      "REFRESHSESION": "/consultaproductos/servlet/UpdateSessionService?SESION=%SESION%&IDIOMA=%IDIOMA%",
+      "LOGOUTSESSION": "/consultaproductos/servlet/CerrarSesion?SESION=%SESION%&IDIOMA=%IDIOMA%"
+    }
+  }
+}

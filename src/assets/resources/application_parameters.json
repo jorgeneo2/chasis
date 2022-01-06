@@ -1,0 +1,41 @@
+{
+  "data": {
+    "parameters": {
+      "headers_names": {
+        "authorization": "Authorization",
+        "timestamp": "timestamp",
+        "application": "application",
+        "channel_id": "channel-id",
+        "terminal_id": "terminal_id",
+        "terminal_id_value": "127.0.0.1",
+        "transaction_id": "transaction_id",
+        "token_user_id": "token-user-id"
+      },
+      "headers": {
+        "application": "PortalTransaccional - APP PJ",
+        "channel_id": "100"
+      },
+      "sso": {
+        "indexedDbConfigs": {
+          "primaryKey": 1,
+          "dbName": "PortalPJAngular",
+          "dbVersion": 1,
+          "tableName": "usuariopj",
+          "tableHeaders": ", accessToken, refreshToken, direccionip, session, fechaUltimoIngreso, idioma"
+        },
+        "tokenParams": {
+          "grant_type": "refresh_token",
+          "client_id": "8a004a12",
+          "client_secret": "d994d6833df3d397ff8b72cc08d513be"
+        },
+        "secondsToRefresh": 430,
+        "autoRefreshToken": true
+      },
+      "sessionData": {
+        "application": "Portal PJ",
+        "channel_id": "41",
+        "terminal_id": "127.0.0.1"
+      }
+    }
+  }
+}

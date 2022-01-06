@@ -1,0 +1,12 @@
+{
+  "data": {
+    "copies": {
+      "sessionExpired": {
+        "title": "Has superado el tiempo límite de esta sesión",
+        "info": "Te invitamos a iniciar sesión nuevamente.",
+        "button": "Salir",
+        "test": "Esto es un texto de ejemplo para revisar el funcionamiento de los configmaps"
+      }
+    }
+  }
+}

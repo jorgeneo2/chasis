@@ -1,0 +1,15 @@
+{
+  "data": {
+    "businessRules": {
+      "phonePrefix": "$57",
+      "adaptiveCustomerStatus": {
+        "inactive": "Inactivo",
+        "noEnrolled": "NoEnrolado",
+        "preEnrolled": "PreEnrolado",
+        "active": "Activo",
+        "locked": "Bloqueado",
+        "requestUser": "ExigirUsername"
+      }
+    }
+  }
+}
