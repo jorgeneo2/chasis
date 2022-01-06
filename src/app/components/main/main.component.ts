@@ -11,8 +11,13 @@ export class MainComponent implements OnInit {
   constructor() {
     registerApplication({
       name: 'header',
-      app: () => System.import('/header-pj/main-es2015.js'),
-      activeWhen: '/'
+      app: () => System.import('http://localhost:4201/main.js'), // http://localhost:4201/main.js o solo nginx /header/main.js
+      activeWhen: '/',
+      customProps: { 
+
+        MiProps: 'paso algun parametro' 
+
+      }
     });
   }
 
